@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.5.0)
+project(v8 VERSION 0.1.0 LANGUAGES C CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
+
+set(LIBPATH ${PROJECT_BINARY_DIR}/lib)
+
+
+set(SRCPATH ./src)
+
+add_subdirectory(src)
+add_subdirectory(tests)
+

@@ -1,0 +1,13 @@
+include_directories(include)
+include_directories(../include)
+
+aux_source_directory(src SRC)
+
+add_executable(network ${SRC})
+
+# 查找顶层 lib 目录中的 MyLibrary（根据实际库名替换）
+find_library(MY_LIBRARY_PATH x1 PATHS ${CMAKE_SOURCE_DIR}/lib)
+
+target_link_libraries(network PRIVATE ${MY_LIBRARY_PATH})
+
+set_target_properties(network PROPERTIES OUTPUT_NAME "test")

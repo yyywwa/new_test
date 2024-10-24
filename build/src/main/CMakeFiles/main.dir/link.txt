@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g CMakeFiles/main.dir/main.cpp.o -o ../../bin/main  -Wl,-rpath,/home/ike/program/test/build/lib ../../lib/libutil.so 
